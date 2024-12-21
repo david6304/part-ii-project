@@ -264,10 +264,13 @@ def grasp(data, permutation, d, t):
     if t != 0:
         permutation = grasp(data, permutation, d, t-1)
     improved = True
+    iteration = 0
     while improved:
-        cur_score, _ = score_permutation(data, permutation)
+        iteration += 1
+        print(f"Iteration {iteration}, tier {t}")
+        cur_score = score_permutation(data, permutation)
         new_perm = dfs(data, permutation, d, 1, t)
-        new_score, _ = score_permutation(data, new_perm)
+        new_score = score_permutation(data, new_perm)
         if new_score > cur_score:
             permutation = new_perm
         else:
@@ -281,7 +284,7 @@ def grasp(data, permutation, d, t):
 if __name__ == "__main__":
     # Generate synthetic linear Gaussian data
     np.random.seed(42)
-    n = 1000
+    n = 10000
     m = 5
     # True model: X0->X2, X1->X2, X2->X3, X2->X4
     # X0,X1 exogenous normal(0,1)
@@ -303,4 +306,5 @@ if __name__ == "__main__":
     print("Final permutation:", final_perm)
     final_score, final_dag = score_permutation(data, final_perm)
     print("Final DAG parents:", final_dag['parents'])
+    print("True DAG parents:", [[], [], [0, 1], [2], [2]])
     print("Final BIC score:", final_score)
