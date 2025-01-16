@@ -7,3 +7,6 @@ torch
 torch-geometric
 scikit-learn < 1.6
 jupyter
+causal-learn
+openpyxl
+seaborn
