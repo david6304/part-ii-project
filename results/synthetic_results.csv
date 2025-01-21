@@ -1,0 +1,10 @@
+Accuracy,Model,Variation,File,Dataset
+0.85,XGBoost,base,asia_1000_original.csv,asia
+0.815,GNN,base,asia_1000_original.csv,asia
+0.85,DNN,base,asia_1000_original.csv,asia
+0.846,XGBoost,base,asia_5000_original.csv,asia
+0.825,GNN,base,asia_5000_original.csv,asia
+0.839,DNN,base,asia_5000_original.csv,asia
+0.8575,XGBoost,base,asia_10000_original.csv,asia
+0.8585,GNN,base,asia_10000_original.csv,asia
+0.853,DNN,base,asia_10000_original.csv,asia
