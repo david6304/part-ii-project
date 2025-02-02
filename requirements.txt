@@ -10,3 +10,8 @@ jupyter
 causal-learn
 openpyxl
 seaborn
+pyyaml
+pytest
+dowhy
+optuna
+git+https://github.com/xunzheng/notears.git # notears

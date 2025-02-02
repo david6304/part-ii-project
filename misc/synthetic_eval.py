@@ -2,7 +2,7 @@ import pandas as pd
 from models.xgboost_eval import train_and_evaluate_xgboost
 from models.gnn_eval import train_and_evaluate_gnn
 from models.dnn_eval import train_and_evaluate_dnn
-# from models.bayesian_eval import train_and_evaluate_bayesian
+from models.bayesian_eval import train_and_evaluate_bayesian
 # from models.cem_eval import train_and_evaluate_cem
 from models.utils import load_synthetic_variations
 
@@ -11,8 +11,8 @@ MODELS = {
     "XGBoost": train_and_evaluate_xgboost,
     "GNN": train_and_evaluate_gnn,
     "DNN": train_and_evaluate_dnn,
-    # "Bayesian Network": train_and_evaluate_bayesian,  # Add evaluation function here
-    # "Causal GNN": train_and_evaluate_cem,  # Add evaluation function here
+    # "Bayesian Network": train_and_evaluate_bayesian, 
+    # "Causal GNN": train_and_evaluate_cem, 
 }
 
 def evaluate_synthetic_datasets():

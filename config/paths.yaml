@@ -1,0 +1,15 @@
+# Paths to datasets and outputs
+data:
+  synthetic:
+    base: "data/synthetic"
+    asia: "data/synthetic/asia/base"
+    alarm: "data/synthetic/alarm/base"
+    auto_mpg: "data/synthetic/auto_mpg/base"
+    noise_template: "data/synthetic/{dataset}/noise_{level}"
+  real:
+    raw: "data/real/raw"
+    processed: "data/real/processed"
+
+output:
+  models: "models/saved"
+  results: "results"

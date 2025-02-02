@@ -1,5 +1,5 @@
 import xgboost as xgb
-from models.utils import split_data, calculate_metrics
+from misc.utils import split_data, calculate_metrics
 
 def train_and_evaluate_xgboost(data, target_col, task, variation, file_name):
     """
